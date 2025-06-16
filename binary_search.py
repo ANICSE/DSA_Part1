@@ -45,7 +45,22 @@ def main():
         print(f"Success! Target found at index: {result_index_2}")
     else:
         print("Failure. Target not found in the list.")
+        
+    print("Performing Binary search on un-sorted array")
+    un_sort = [7 ,5, 1, 19, 25, 15, 80, 95, 65]
+    un_sort.sort()
+    print(f"List after sorting: {un_sort}")
+    print(un_sort)
 
+    target_to_find = 29
+    result_index_1 = binary_search(my_sorted_list, target_to_find)
+    
+    target_to_find = 80
+    print(f"Searching for target: {target_to_find}")
+    if result_index_1 != -1:
+        print(f"Success! Target found at index: {result_index_1}")
+    else:
+        print("Failure. Target not found in the list.")
 # Standard entry point to run the main function
 if __name__ == "__main__":
     main()
