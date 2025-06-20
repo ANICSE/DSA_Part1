@@ -1,0 +1,19 @@
+Binary search
+
+BFS/DFS/Flood fill
+
+Tree traversals
+
+Hash tables
+
+Linked list, stacks, queues, two pointers/sliding window
+
+Binary heaps
+
+Dynamic programming
+
+Union find
+
+Ad hoc/string manipulations
+
+Arrays
