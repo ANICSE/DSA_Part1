@@ -49,11 +49,12 @@ def inorder(root):
         inorder(root.left)
         print(root.data, end=' ')
         inorder(root.right)
-def revinorder(root):
+def revinorder(root, result):
     if root:
-        revinorder(root.right)
+        revinorder(root.right, result)
+        result.append(root.data)
         print(root.data, end=' ')
-        revinorder(root.left)
+        revinorder(root.left, result)
 
 def main():
     print("Binary Search Tree")
@@ -67,13 +68,17 @@ def main():
     # root.left = TreeNode(7, TreeNode(5))
     # root.left.left.right = TreeNode(6)
     # root.right = TreeNode(11, TreeNode(9), TreeNode(10))
+    result = []
     root = TreeNode(16)
     root.left = TreeNode(10)
     root.left.left = TreeNode(8)
     root.right = TreeNode(20, TreeNode(18, TreeNode(17), TreeNode(19)), TreeNode(24))
-    print(inorder(root))
+    inorder(root)
+    
     print("Reverse Inorder Traversal")
-    print(revinorder(root))
+    print(revinorder(root, result))
+    tree_size = len(result)
+    print("tree size", tree_size)
     print(find_second_largest_inorder(root))
 
 if __name__ == "__main__":
