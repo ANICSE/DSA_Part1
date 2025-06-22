@@ -1,5 +1,6 @@
 def sort_character_hash(arr):
     count = {}
+    #if mixed of upper and lower wont work for existing solution, need to convert to lower first
     arr = arr.lower()
     print(arr)
     #arr.lower()
