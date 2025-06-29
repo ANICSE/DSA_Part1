@@ -26,12 +26,13 @@ def zero_sum_triplet(arr):
             elif(arr[left] + arr[right] < val):
                 left+= 1
             else:                
-                print(arr[i],",", arr[left], ",", arr[right])
+                print("[", arr[i],",", arr[left], ",", arr[right], "]")
                 left+= 1
                 right-=1
 
 def main():
-    nums = [0, -2, 7, 2, 4, -6]
+    nums = [-1, 0, 1, 2, -1, -4]
+    #nums = [0, -2, 7, 2, 4, -6]
     zero_sum_triplet(nums)
 
 if __name__ == "__main__":
